@@ -23,6 +23,8 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.Timer;
 
 public class lectorQR extends javax.swing.JFrame implements Runnable, ThreadFactory {
 
@@ -85,9 +87,8 @@ public class lectorQR extends javax.swing.JFrame implements Runnable, ThreadFact
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        AsistenciaMenu frame = new AsistenciaMenu();
-        frame.setVisible(true);
-        this.setVisible(false);
+        webcam.close();
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -131,7 +132,7 @@ public class lectorQR extends javax.swing.JFrame implements Runnable, ThreadFact
 
     private void initWebcam() {
         Dimension size = WebcamResolution.QVGA.getSize();
-        webcam = Webcam.getWebcams().get(1); //0 is default webcam
+        webcam = Webcam.getWebcams().get(0); //0 is default webcam
         webcam.setViewSize(size);
 
         panel = new WebcamPanel(webcam);
@@ -145,9 +146,18 @@ public class lectorQR extends javax.swing.JFrame implements Runnable, ThreadFact
 
     @Override
     public void run() {
+        boolean captureEnabled = true;
+
+        Timer timer = new Timer(5000, e -> {
+            JOptionPane.getRootFrame().dispose();
+            // Limpiar el cuadro de texto
+            result_field.setText("");
+        });
+        timer.setRepeats(false); // Ejecutar solo una vez
+
         do {
             try {
-                Thread.sleep(100);
+                Thread.sleep(100); // Ajusta según sea necesario
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -156,68 +166,86 @@ public class lectorQR extends javax.swing.JFrame implements Runnable, ThreadFact
             BufferedImage image = null;
 
             if (webcam.isOpen()) {
-                if ((image = webcam.getImage()) == null) {
-                    continue;
+                image = webcam.getImage();
+            }
+
+            // Verifica si la imagen no es null antes de procesarla
+            if (image != null) {
+                LuminanceSource source = new BufferedImageLuminanceSource(image);
+                BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
+
+                try {
+                    result = new MultiFormatReader().decode(bitmap);
+                } catch (NotFoundException e) {
+                    //No result...
                 }
-            }
 
-            LuminanceSource source = new BufferedImageLuminanceSource(image);
-            BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
+                if (result != null) {
+                    // Desactiva temporalmente la captura de imágenes
+                    captureEnabled = false;
+                    result_field.setText(result.getText());
+                    String codigoQR = result_field.getText();
+                    int dniAlumno = Integer.parseInt(codigoQR);
 
-            try {
-                result = new MultiFormatReader().decode(bitmap);
-            } catch (NotFoundException e) {
-                //No result...
-            }
+                    // Obtener información del alumno
+                    AlumnoDAO control = new AlumnoDAO();
+                    Alumno datos = control.buscarAlumnoPorDni(dniAlumno);
 
-            if (result != null) {
-                result_field.setText(result.getText());
-                String codigoQR = result_field.getText();
-                int dniAlumno = Integer.parseInt(codigoQR);
+                    // Verificar si se encontró un alumno
+                    if (datos != null) {
+                        String nombre = datos.getNom_Alu();
+                        String Ape_ma = datos.getApe_MAl();
+                        String Ape_pa = datos.getApe_PAl();
+                        int id_alumno = datos.getId_Alumno();
 
-                // Obtener información del alumno
-                AlumnoDAO control = new AlumnoDAO();
-                Alumno datos = control.buscarAlumnoPorDni(dniAlumno);
+                        // Obtener la hora actual
+                        LocalTime horaActual = LocalTime.now();
 
-                // Verificar si se encontró un alumno
-                if (datos != null) {
-                    String nombre = datos.getNom_Alu();
-                    String Ape_ma = datos.getApe_MAl();
-                    String Ape_pa = datos.getApe_PAl();
-                    int id_alumno = datos.getId_Alumno();
+                        // Crear instancia de Asistencia con llegada_temprano dependiendo de la hora
+                        boolean llegadaTemprano = horaActual.isBefore(LocalTime.of(8, 0));
+                        Asistencia nuevaAsistencia = new Asistencia(id_alumno, new Date(System.currentTimeMillis()), llegadaTemprano);
 
-                    // Obtener la hora actual
-                    LocalTime horaActual = LocalTime.now();
+                        // Registrar asistencia
+                        AsistenciaDAO asistenciaDAO = new AsistenciaDAO();
+                        boolean asistenciaRegistrada = asistenciaDAO.marcarAsistencia(nuevaAsistencia);
 
-                    // Crear instancia de Asistencia con llegada_temprano dependiendo de la hora
-                    boolean llegadaTemprano = horaActual.isBefore(LocalTime.of(8, 0));
-                    Asistencia nuevaAsistencia = new Asistencia(id_alumno, new Date(System.currentTimeMillis()), llegadaTemprano);
+                        // Resto del código para mostrar información del alumno y mensaje según el registro
+                        String mensaje;
+                        if (asistenciaRegistrada) {
+                            String estadoAsistencia = llegadaTemprano ? "Registrada a tiempo" : "Registrada fuera de hora";
+                            mensaje = "Datos del Alumno:\n"
+                                    + "ID: " + id_alumno + "\n"
+                                    + "Nombre: " + nombre + "\n"
+                                    + "Apellido Materno: " + Ape_ma + "\n"
+                                    + "Apellido Paterno: " + Ape_pa + "\n"
+                                    + "Asistencia: " + estadoAsistencia;
+                        } else {
+                            mensaje = "Error al marcar la asistencia.";
+                        }
 
-                    // Registrar asistencia
-                    AsistenciaDAO asistenciaDAO = new AsistenciaDAO();
-                    boolean asistenciaRegistrada = asistenciaDAO.marcarAsistencia(nuevaAsistencia);
-
-                    // Resto del código para mostrar información del alumno y mensaje según el registro
-                    String mensaje;
-                    if (asistenciaRegistrada) {
-                        String estadoAsistencia = llegadaTemprano ? "Registrada a tiempo" : "Registrada fuera de hora";
-                        mensaje = "Datos del Alumno:\n"
-                                + "ID: " + id_alumno + "\n"
-                                + "Nombre: " + nombre + "\n"
-                                + "Apellido Materno: " + Ape_ma + "\n"
-                                + "Apellido Paterno: " + Ape_pa + "\n"
-                                + "Asistencia: " + estadoAsistencia;
+                        // Mostrar el mensaje en el hilo de la interfaz de usuario
+                        SwingUtilities.invokeLater(() -> {
+                            JOptionPane.showMessageDialog(this, mensaje, "Información del Alumno", asistenciaRegistrada ? JOptionPane.INFORMATION_MESSAGE : JOptionPane.ERROR_MESSAGE);
+                            // Iniciar el temporizador para cerrar el JOptionPane después de 5 segundos
+                            timer.restart();
+                        });
                     } else {
-                        mensaje = "Error al marcar la asistencia.";
+                        // Alumno no encontrado, puedes mostrar un mensaje de error
+                        JOptionPane.showMessageDialog(this, "Alumno no encontrado.", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    try {
+                        Thread.sleep(5000); // Agrega un retraso de 5 segundos (ajusta según sea necesario)
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
                     }
 
-                    // Mostrar el mensaje
-                    JOptionPane.showMessageDialog(this, mensaje, "Información del Alumno", asistenciaRegistrada ? JOptionPane.INFORMATION_MESSAGE : JOptionPane.ERROR_MESSAGE);
-                } else {
-                    // Alumno no encontrado, puedes mostrar un mensaje de error
-                    JOptionPane.showMessageDialog(this, "Alumno no encontrado.", "Error", JOptionPane.ERROR_MESSAGE);
+                    // Vuelve a habilitar la captura de imágenes después de un tiempo
+                    captureEnabled = true;
                 }
+            } else {
+                // Manejar el caso en que la imagen es null, posiblemente registrando un mensaje de error o tomando alguna acción adecuada.
             }
+
         } while (true);
     }
 

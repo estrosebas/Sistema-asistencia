@@ -6,10 +6,10 @@ package Formulario;
 
 import Datos.AlumnoDAO;
 import Datos.AsistenciaDAO;
-import Datos.HabilidadDAO;
+
 import Entidad.Alumno;
 import Entidad.Asistencia;
-import Entidad.Habilidad;
+
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;

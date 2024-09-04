@@ -39,10 +39,7 @@ public class menuunitario extends javax.swing.JFrame {
         setearconexiontexto();
         obteneradmin();
         consultaralumnos();
-        consultarRepresentantes();
-        consultarMatriculas();
-        consultarDistritosalum();
-        consultarDistritosrepres();
+        
     }
 
     public Image getIconImage() {
@@ -89,19 +86,14 @@ public class menuunitario extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         panelbotonMatriculas = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         panelbotonRepresentantes = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         panelbotonAlumnos = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         Distritosboton = new javax.swing.JPanel();
-        jPanel14 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jPanel17 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         Distritosboton2 = new javax.swing.JPanel();
         jPanel29 = new javax.swing.JPanel();
@@ -112,10 +104,6 @@ public class menuunitario extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         usertesxt = new javax.swing.JLabel();
         databasetag = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        salida = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         multimenus = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
@@ -133,52 +121,23 @@ public class menuunitario extends javax.swing.JFrame {
         BuscarAlumno = new javax.swing.JButton();
         HabilidadesAlumno = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jPanel13 = new javax.swing.JPanel();
-        jPanel16 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        Tabla2 = new javax.swing.JTable();
-        jLabel7 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
-        RegistrarRepresentante = new javax.swing.JButton();
-        BuscarRepresentante = new javax.swing.JButton();
-        modificarRepresentante = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        Telefonos = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jPanel15 = new javax.swing.JPanel();
-        jPanel20 = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jPanel21 = new javax.swing.JPanel();
-        Registrar = new javax.swing.JButton();
-        modificar = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        Buscar1 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        matriculitas = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        asistenciatabla = new javax.swing.JTable();
+        jLabel6 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        TablaDistritoAlum = new javax.swing.JTable();
-        jLabel22 = new javax.swing.JLabel();
-        jPanel12 = new javax.swing.JPanel();
-        RegistrarDistritoAlumno = new javax.swing.JButton();
-        modificar1 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        Buscar2 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jPanel18 = new javax.swing.JPanel();
-        jPanel22 = new javax.swing.JPanel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        tabladistritorepre = new javax.swing.JTable();
-        jLabel24 = new javax.swing.JLabel();
-        jPanel23 = new javax.swing.JPanel();
-        Registrar2 = new javax.swing.JButton();
-        modificar2 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        Buscar3 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        RegistrarAlumnos1 = new javax.swing.JButton();
+        modificarAlumno1 = new javax.swing.JButton();
+        EliminarAlumno1 = new javax.swing.JButton();
+        regreasr = new javax.swing.JButton();
+        dnientrada = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        salida = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImage(getIconImage());
@@ -207,19 +166,13 @@ public class menuunitario extends javax.swing.JFrame {
         });
         panelbotonMatriculas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                panelbotonMatriculasMouseClicked(evt);
+                none(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 panelbotonMatriculasMouseExited(evt);
             }
         });
         panelbotonMatriculas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel12.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel12.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("Matriculas");
-        panelbotonMatriculas.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 32, 80, -1));
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/matricula.png"))); // NOI18N
         panelbotonMatriculas.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 30, 40));
@@ -244,14 +197,14 @@ public class menuunitario extends javax.swing.JFrame {
         });
         panelbotonRepresentantes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/repre.png"))); // NOI18N
+        panelbotonRepresentantes.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 30, 40));
+
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
         jLabel10.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Representantes");
-        panelbotonRepresentantes.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 34, -1, -1));
-
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/repre.png"))); // NOI18N
-        panelbotonRepresentantes.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 30, 40));
+        jLabel10.setText("Asistencia");
+        panelbotonRepresentantes.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 80, -1));
 
         jPanel3.add(panelbotonRepresentantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 140, 80));
 
@@ -287,61 +240,6 @@ public class menuunitario extends javax.swing.JFrame {
         Distritosboton.setBackground(new java.awt.Color(164, 112, 86));
         Distritosboton.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         Distritosboton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel14.setBackground(new java.awt.Color(164, 112, 86));
-        jPanel14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel14.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jPanel14MouseMoved(evt);
-            }
-        });
-        jPanel14.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel14MouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanel14MouseExited(evt);
-            }
-        });
-        jPanel14.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentMoved(java.awt.event.ComponentEvent evt) {
-                jPanel14ComponentMoved(evt);
-            }
-        });
-        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel11.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Distrito Alumno");
-        jPanel14.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
-
-        Distritosboton.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 2, 90, 40));
-
-        jPanel17.setBackground(new java.awt.Color(164, 112, 86));
-        jPanel17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel17.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jPanel17MouseMoved(evt);
-            }
-        });
-        jPanel17.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel17MouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanel17MouseExited(evt);
-            }
-        });
-        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel15.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel15.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Distrito Repre");
-        jPanel17.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
-
-        Distritosboton.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 48, 87, 30));
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distrito-electoral.png"))); // NOI18N
         jLabel21.setText("jLabel18");
@@ -423,50 +321,6 @@ public class menuunitario extends javax.swing.JFrame {
         jPanel3.add(databasetag, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, -1, -1));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 550));
-
-        jPanel2.setBackground(new java.awt.Color(128, 0, 128));
-        jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                jPanel2MouseDragged(evt);
-            }
-        });
-        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel2MousePressed(evt);
-            }
-        });
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        salida.setBackground(new java.awt.Color(255, 255, 255));
-        salida.setOpaque(false);
-        salida.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                salidaMouseMoved(evt);
-            }
-        });
-        salida.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                salidaMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                salidaMouseExited(evt);
-            }
-        });
-        salida.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/x.png"))); // NOI18N
-        salida.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 18, 20));
-
-        jPanel2.add(salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 0, 30, 30));
-
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/banner.jpg"))); // NOI18N
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, 100));
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 100));
 
         multimenus.setBackground(new java.awt.Color(0, 0, 0,100));
 
@@ -687,97 +541,138 @@ public class menuunitario extends javax.swing.JFrame {
 
         multimenus.addTab("1", jPanel5);
 
-        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel9.setBackground(new java.awt.Color(252, 241, 225));
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel13.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        jPanel8.setBackground(new java.awt.Color(252, 241, 225));
-        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Tabla2.setModel(new javax.swing.table.DefaultTableModel(
+        asistenciatabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Id", "Nombre", "Apellido materno", "Apellido paterno", "Dni"
+                "Id", "Dni", "Fecha", "Temprano/Tarde"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(Tabla2);
+        jScrollPane2.setViewportView(asistenciatabla);
 
-        jPanel8.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 615, 265));
+        jPanel9.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 615, 265));
 
-        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("Representantes");
-        jPanel8.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Asistencia");
+        jPanel9.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jPanel9.setBackground(new java.awt.Color(0, 0, 0, 100));
+        jPanel10.setBackground(new java.awt.Color(0, 0, 0, 100));
 
-        RegistrarRepresentante.setText("Registrar");
-        RegistrarRepresentante.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        RegistrarAlumnos1.setText("Registrar");
+        RegistrarAlumnos1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                RegistrarRepresentanteMouseMoved(evt);
+                RegistrarAlumnos1MouseMoved(evt);
             }
         });
-        RegistrarRepresentante.addMouseListener(new java.awt.event.MouseAdapter() {
+        RegistrarAlumnos1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                RegistrarRepresentanteMouseExited(evt);
+                RegistrarAlumnos1MouseExited(evt);
             }
         });
-        RegistrarRepresentante.addActionListener(new java.awt.event.ActionListener() {
+        RegistrarAlumnos1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrarRepresentanteActionPerformed(evt);
+                RegistrarAlumnos1ActionPerformed(evt);
             }
         });
 
-        BuscarRepresentante.setText("Buscar");
-        BuscarRepresentante.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        modificarAlumno1.setText("Modificar");
+        modificarAlumno1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                BuscarRepresentanteMouseMoved(evt);
+                modificarAlumno1MouseMoved(evt);
             }
         });
-        BuscarRepresentante.addMouseListener(new java.awt.event.MouseAdapter() {
+        modificarAlumno1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BuscarRepresentanteMouseExited(evt);
+                modificarAlumno1MouseExited(evt);
             }
         });
-        BuscarRepresentante.addActionListener(new java.awt.event.ActionListener() {
+        modificarAlumno1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BuscarRepresentanteActionPerformed(evt);
+                modificarAlumno1ActionPerformed(evt);
             }
         });
 
-        modificarRepresentante.setText("Modificar");
-        modificarRepresentante.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        EliminarAlumno1.setText("Eliminar");
+        EliminarAlumno1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                modificarRepresentanteMouseMoved(evt);
+                EliminarAlumno1MouseMoved(evt);
             }
         });
-        modificarRepresentante.addMouseListener(new java.awt.event.MouseAdapter() {
+        EliminarAlumno1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                modificarRepresentanteMouseExited(evt);
+                EliminarAlumno1MouseExited(evt);
             }
         });
-        modificarRepresentante.addActionListener(new java.awt.event.ActionListener() {
+        EliminarAlumno1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modificarRepresentanteActionPerformed(evt);
+                EliminarAlumno1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Eliminar");
+        regreasr.setText("Regresar");
+        regreasr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regreasrActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap(10, Short.MAX_VALUE)
+                .addComponent(RegistrarAlumnos1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(modificarAlumno1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(EliminarAlumno1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(225, 225, 225)
+                .addComponent(regreasr)
+                .addGap(18, 18, 18))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RegistrarAlumnos1)
+                    .addComponent(modificarAlumno1)
+                    .addComponent(EliminarAlumno1)
+                    .addComponent(regreasr)))
+        );
+
+        jPanel9.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 610, 40));
+
+        dnientrada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dnientradaActionPerformed(evt);
+            }
+        });
+        jPanel9.add(dnientrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 140, -1));
+
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("DNI :");
+        jPanel9.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
+
+        jButton2.setText("Buscar");
         jButton2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jButton2MouseMoved(evt);
@@ -793,551 +688,76 @@ public class menuunitario extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel9.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, -1, -1));
 
-        Telefonos.setText("Telefonos");
-        Telefonos.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                TelefonosMouseMoved(evt);
-            }
-        });
-        Telefonos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                TelefonosMouseExited(evt);
-            }
-        });
-        Telefonos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TelefonosActionPerformed(evt);
-            }
-        });
-
-        jButton6.setText("Actualizar");
-        jButton6.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jButton6MouseMoved(evt);
-            }
-        });
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton6MouseExited(evt);
-            }
-        });
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(RegistrarRepresentante, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(BuscarRepresentante, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(modificarRepresentante, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Telefonos, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton6)
-                .addContainerGap(12, Short.MAX_VALUE))
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 680, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel8Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RegistrarRepresentante)
-                    .addComponent(BuscarRepresentante)
-                    .addComponent(modificarRepresentante)
-                    .addComponent(jButton2)
-                    .addComponent(Telefonos)
-                    .addComponent(jButton6)))
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 450, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel8Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jPanel8.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 610, 40));
-
-        jPanel13.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 440));
-
-        multimenus.addTab("2", jPanel13);
-
-        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel20.setBackground(new java.awt.Color(252, 241, 225));
-        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel16.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel16.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel16.setText("Matriculas");
-        jPanel20.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
-
-        jPanel21.setBackground(new java.awt.Color(0, 0, 0, 100));
-
-        Registrar.setText("Registrar");
-        Registrar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                RegistrarMouseMoved(evt);
-            }
-        });
-        Registrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                RegistrarMouseExited(evt);
-            }
-        });
-        Registrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrarActionPerformed(evt);
-            }
-        });
-
-        modificar.setText("Modificar");
-        modificar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                modificarMouseMoved(evt);
-            }
-        });
-        modificar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                modificarMouseExited(evt);
-            }
-        });
-        modificar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modificarActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("Eliminar");
-        jButton3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jButton3MouseMoved(evt);
-            }
-        });
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton3MouseExited(evt);
-            }
-        });
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        Buscar1.setText("Buscar");
-        Buscar1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                Buscar1MouseMoved(evt);
-            }
-        });
-        Buscar1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                Buscar1MouseExited(evt);
-            }
-        });
-        Buscar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Buscar1ActionPerformed(evt);
-            }
-        });
-
-        jButton7.setText("Actualizar");
-        jButton7.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jButton7MouseMoved(evt);
-            }
-        });
-        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton7MouseExited(evt);
-            }
-        });
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
-        jPanel21.setLayout(jPanel21Layout);
-        jPanel21Layout.setHorizontalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel21Layout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
-                .addComponent(Registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Buscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(modificar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
-        );
-        jPanel21Layout.setVerticalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel21Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(modificar)
-                    .addComponent(Buscar1)
-                    .addComponent(jButton3)
-                    .addComponent(Registrar)
-                    .addComponent(jButton7))
-                .addGap(7, 7, 7))
-        );
-
-        jPanel20.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 610, 40));
-
-        matriculitas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "ID Matricula", "ID Alumno", "Nivel", "Grado", "Estado", "Metodo", "Monto"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane3.setViewportView(matriculitas);
-
-        jPanel20.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 610, 260));
-
-        jPanel15.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 440));
-
-        multimenus.addTab("3", jPanel15);
-
-        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel11.setBackground(new java.awt.Color(252, 241, 225));
-        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        TablaDistritoAlum.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Id", "Nombre"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane4.setViewportView(TablaDistritoAlum);
-
-        jPanel11.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 615, 265));
-
-        jLabel22.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel22.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel22.setText("Distrito - Alumnos");
-        jPanel11.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
-
-        jPanel12.setBackground(new java.awt.Color(0, 0, 0, 100));
-
-        RegistrarDistritoAlumno.setText("Registrar");
-        RegistrarDistritoAlumno.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                RegistrarDistritoAlumnoMouseMoved(evt);
-            }
-        });
-        RegistrarDistritoAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                RegistrarDistritoAlumnoMouseExited(evt);
-            }
-        });
-        RegistrarDistritoAlumno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrarDistritoAlumnoActionPerformed(evt);
-            }
-        });
-
-        modificar1.setText("Modificar");
-        modificar1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                modificar1MouseMoved(evt);
-            }
-        });
-        modificar1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                modificar1MouseExited(evt);
-            }
-        });
-        modificar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modificar1ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setText("Eliminar");
-        jButton4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jButton4MouseMoved(evt);
-            }
-        });
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton4MouseExited(evt);
-            }
-        });
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        Buscar2.setText("Buscar");
-        Buscar2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                Buscar2MouseMoved(evt);
-            }
-        });
-        Buscar2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                Buscar2MouseExited(evt);
-            }
-        });
-        Buscar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Buscar2ActionPerformed(evt);
-            }
-        });
-
-        jButton8.setText("Actualizar");
-        jButton8.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jButton8MouseMoved(evt);
-            }
-        });
-        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton8MouseExited(evt);
-            }
-        });
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
-                .addComponent(RegistrarDistritoAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Buscar2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(modificar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
-        );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(modificar1)
-                    .addComponent(jButton4)
-                    .addComponent(Buscar2)
-                    .addComponent(RegistrarDistritoAlumno)
-                    .addComponent(jButton8))
-                .addGap(7, 7, 7))
-        );
-
-        jPanel11.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 610, 40));
-
-        jPanel10.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 440));
-
-        multimenus.addTab("4", jPanel10);
-
-        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel22.setBackground(new java.awt.Color(252, 241, 225));
-        jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        tabladistritorepre.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Id", "Nombre"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane5.setViewportView(tabladistritorepre);
-
-        jPanel22.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 615, 265));
-
-        jLabel24.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel24.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel24.setText("Distrito - Representantes");
-        jPanel22.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
-
-        jPanel23.setBackground(new java.awt.Color(0, 0, 0, 100));
-
-        Registrar2.setText("Registrar");
-        Registrar2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                Registrar2MouseMoved(evt);
-            }
-        });
-        Registrar2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                Registrar2MouseExited(evt);
-            }
-        });
-        Registrar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Registrar2ActionPerformed(evt);
-            }
-        });
-
-        modificar2.setText("Modificar");
-        modificar2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                modificar2MouseMoved(evt);
-            }
-        });
-        modificar2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                modificar2MouseExited(evt);
-            }
-        });
-        modificar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modificar2ActionPerformed(evt);
-            }
-        });
-
-        jButton5.setText("Eliminar");
-        jButton5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jButton5MouseMoved(evt);
-            }
-        });
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton5MouseExited(evt);
-            }
-        });
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-
-        Buscar3.setText("Buscar");
-        Buscar3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                Buscar3MouseMoved(evt);
-            }
-        });
-        Buscar3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                Buscar3MouseExited(evt);
-            }
-        });
-        Buscar3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Buscar3ActionPerformed(evt);
-            }
-        });
-
-        jButton9.setText("Actualizar");
-        jButton9.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jButton9MouseMoved(evt);
-            }
-        });
-        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton9MouseExited(evt);
-            }
-        });
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
-        jPanel23.setLayout(jPanel23Layout);
-        jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel23Layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addComponent(Registrar2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Buscar3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(modificar2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43))
-        );
-        jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel23Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(modificar2)
-                    .addComponent(Buscar3)
-                    .addComponent(Registrar2)
-                    .addComponent(jButton9)
-                    .addComponent(jButton5))
-                .addGap(7, 7, 7))
-        );
-
-        jPanel22.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 610, 40));
-
-        jPanel18.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 440));
-
-        multimenus.addTab("5", jPanel18);
+        multimenus.addTab("2", jPanel8);
 
         jPanel1.add(multimenus, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 670, 470));
+
+        jPanel2.setBackground(new java.awt.Color(128, 0, 128));
+        jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel2MouseDragged(evt);
+            }
+        });
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel2MousePressed(evt);
+            }
+        });
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        salida.setBackground(new java.awt.Color(255, 255, 255));
+        salida.setOpaque(false);
+        salida.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                salidaMouseMoved(evt);
+            }
+        });
+        salida.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                salidaMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                salidaMouseExited(evt);
+            }
+        });
+        salida.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/x.png"))); // NOI18N
+        salida.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 18, 20));
+
+        jPanel2.add(salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 0, 30, 30));
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/banner.jpg"))); // NOI18N
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, 100));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 100));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1400,306 +820,9 @@ public class menuunitario extends javax.swing.JFrame {
         multimenus.setSelectedIndex(2);
     }//GEN-LAST:event_panelbotonRepresentantesMouseClicked
 
-    private void jPanel14MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel14MouseMoved
-        jPanel14.setBackground(new Color(166, 49, 57));
-    }//GEN-LAST:event_jPanel14MouseMoved
-
-    private void jPanel17MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MouseMoved
-        jPanel17.setBackground(new Color(166, 49, 57));
-    }//GEN-LAST:event_jPanel17MouseMoved
-
-    private void jPanel14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel14MouseExited
-        jPanel14.setBackground(new Color(164,112,86));
-    }//GEN-LAST:event_jPanel14MouseExited
-
-    private void jPanel17MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MouseExited
-        jPanel17.setBackground(new Color(164,112,86));
-    }//GEN-LAST:event_jPanel17MouseExited
-
-    private void panelbotonMatriculasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelbotonMatriculasMouseClicked
-        multimenus.setSelectedIndex(3);
-    }//GEN-LAST:event_panelbotonMatriculasMouseClicked
-
-    private void jPanel14ComponentMoved(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel14ComponentMoved
-
-    }//GEN-LAST:event_jPanel14ComponentMoved
-
-    private void jPanel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel14MouseClicked
-        multimenus.setSelectedIndex(4);
-    }//GEN-LAST:event_jPanel14MouseClicked
-
-    private void jPanel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MouseClicked
-        multimenus.setSelectedIndex(5);
-    }//GEN-LAST:event_jPanel17MouseClicked
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        consultarDistritosrepres();
-        JOptionPane.showMessageDialog(null, "Actualizado!");
-    }//GEN-LAST:event_jButton9ActionPerformed
-
-    private void Buscar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buscar3ActionPerformed
-        buscarDistritoRepre frame = new buscarDistritoRepre();
-        frame.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Buscar3ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        eliminarDistritoRepre frame = new eliminarDistritoRepre();
-        frame.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void modificar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificar2ActionPerformed
-        modificarDistritoRepre frame = new modificarDistritoRepre();
-
-        frame.setVisible(true);
-
-        this.setVisible(false);
-    }//GEN-LAST:event_modificar2ActionPerformed
-
-    private void Registrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Registrar2ActionPerformed
-        try {
-            String distritoR = JOptionPane.showInputDialog(this, "Ingrese el nombre del distrito:");
-
-            if (distritoR == null || distritoR.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Debe ingresar un nombre de distrito válido.");
-                return;
-            }
-
-            DistritoRepre distritoRepre = new DistritoRepre(distritoR);
-            DistritoRepreDAO distritoRepreDAO = new DistritoRepreDAO();
-            boolean registroExitoso = distritoRepreDAO.insertar(distritoRepre);
-
-            if (registroExitoso) {
-                JOptionPane.showMessageDialog(this, "Registro de distrito exitoso");
-            } else {
-                JOptionPane.showMessageDialog(this, "Error en el registro de distrito");
-            }
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Error al ingresar datos numéricos.");
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error en el registro: " + e.getMessage());
-        }
-    }//GEN-LAST:event_Registrar2ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        consultarDistritosalum();
-        JOptionPane.showMessageDialog(null, "Actualizado!");
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void Buscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buscar2ActionPerformed
-        buscarDistritoAlum frame = new buscarDistritoAlum();
-        frame.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Buscar2ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        eliminarDistritoAlum frame = new eliminarDistritoAlum();
-        frame.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void modificar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificar1ActionPerformed
-        modificarDistritoAlum frame = new modificarDistritoAlum();
-
-        frame.setVisible(true);
-
-        this.setVisible(false);
-    }//GEN-LAST:event_modificar1ActionPerformed
-
-    private void RegistrarDistritoAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarDistritoAlumnoActionPerformed
-        try {
-            String distritoA = JOptionPane.showInputDialog(this, "Ingrese el nombre del distrito:");
-
-            if (distritoA == null || distritoA.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Debe ingresar un nombre de distrito válido.");
-                return;
-            }
-
-            DistritoAlum distritoAlum = new DistritoAlum(distritoA);
-            DistritoAlumDAO distritoAlumDAO = new DistritoAlumDAO();
-            boolean registroExitoso = distritoAlumDAO.insertar(distritoAlum);
-
-            if (registroExitoso) {
-                JOptionPane.showMessageDialog(this, "Registro de distrito exitoso");
-            } else {
-                JOptionPane.showMessageDialog(this, "Error en el registro de distrito");
-            }
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Error al ingresar datos numéricos.");
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error en el registro: " + e.getMessage());
-        }
-    }//GEN-LAST:event_RegistrarDistritoAlumnoActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        consultarMatriculas();
-        JOptionPane.showMessageDialog(null, "Actualizado!");
-
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void Buscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buscar1ActionPerformed
-        buscarMatricula frame = new buscarMatricula();
-        frame.setVisible(true);
-        //this.setVisible(false);
-    }//GEN-LAST:event_Buscar1ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        eliminarMatricula frame = new eliminarMatricula();
-        frame.setVisible(true);
-        //this.setVisible(false);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarActionPerformed
-        modificarMatricula frame = new modificarMatricula();
-        frame.setVisible(true);
-        //this.setVisible(false);
-    }//GEN-LAST:event_modificarActionPerformed
-
-    private void RegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarActionPerformed
-
-        String idAlumnoStr = JOptionPane.showInputDialog(this, "Ingrese ID del Alumno:");
-        int idAlumno = Integer.parseInt(idAlumnoStr);  // Convertir la entrada a int.
-        // Opciones para los niveles de matrícula
-        String[] opcionesNivel = {"Inicial", "Primaria", "Secundaria"};
-        int nivelSeleccionado = JOptionPane.showOptionDialog(
-                this,
-                "Seleccione el nivel de matrícula:",
-                "Nivel de Matrícula",
-                JOptionPane.DEFAULT_OPTION,
-                JOptionPane.INFORMATION_MESSAGE,
-                null,
-                opcionesNivel,
-                opcionesNivel[0]
-        );
-
-        // Si el usuario cierra el cuadro de diálogo, terminar el método
-        if (nivelSeleccionado == JOptionPane.CLOSED_OPTION) {
-            return;
-        }
-
-        // Obtener el nivel de matrícula basado en la selección del usuario
-        String nivelMatricula = opcionesNivel[nivelSeleccionado];
-        String gradoStr = JOptionPane.showInputDialog(this, "Ingrese el grado de matrícula:");
-        int grado = Integer.parseInt(gradoStr);
-        //estado
-        // Cuadro de diálogo para seleccionar el estado de la matrícula
-        String[] opcionesEstado = {"Pagado", "Pendiente"};
-        int estadoSeleccionado = JOptionPane.showOptionDialog(
-                this,
-                "Seleccione el estado de la matrícula:",
-                "Estado de Matrícula",
-                JOptionPane.DEFAULT_OPTION,
-                JOptionPane.INFORMATION_MESSAGE,
-                null,
-                opcionesEstado,
-                opcionesEstado[0]
-        );
-
-        if (estadoSeleccionado == JOptionPane.CLOSED_OPTION) {
-            return;
-        }
-        String estadoMatricula = opcionesEstado[estadoSeleccionado];
-        /////
-        // Cuadro de diálogo para seleccionar el método de pago
-        String[] opcionesPago = {"Efectivo", "Tarjeta"};
-        int pagoSeleccionado = JOptionPane.showOptionDialog(
-                this,
-                "Seleccione el método de pago:",
-                "Método de Pago",
-                JOptionPane.DEFAULT_OPTION,
-                JOptionPane.INFORMATION_MESSAGE,
-                null,
-                opcionesPago,
-                opcionesPago[0]
-        );
-
-        if (pagoSeleccionado == JOptionPane.CLOSED_OPTION) {
-            return;
-        }
-        String metodoPago = opcionesPago[pagoSeleccionado];
-        String montoPagoStr = JOptionPane.showInputDialog(this, "Ingrese el monto del pago:");
-        double montoPago = Double.parseDouble(montoPagoStr);
-        String observaciones = JOptionPane.showInputDialog(this, "Ingrese observaciones si las hay:");
-        String idUsuario = JOptionPane.showInputDialog(this, "Ingrese el ID del Usuario que realiza la matrícula:");
-
-        // Crear instancia de Matricula
-        Matricula matricula = new Matricula(idAlumno, nivelMatricula, grado, estadoMatricula, metodoPago, montoPago, observaciones, idUsuario);
-
-        // Crear instancia de MatriculasDAO y registrar la matrícula
-        MatriculaDAO matriculaDAO = new MatriculaDAO();
-        boolean registroExitoso = matriculaDAO.insertar(matricula);
-
-        // Mostrar mensaje de éxito o error
-        if (registroExitoso) {
-            JOptionPane.showMessageDialog(this, "Matrícula registrada con éxito");
-        } else {
-            JOptionPane.showMessageDialog(this, "Error al registrar la matrícula");
-        }
-    }//GEN-LAST:event_RegistrarActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        consultarRepresentantes();
-        JOptionPane.showMessageDialog(null, "Actualizado!");
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void TelefonosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TelefonosActionPerformed
-        telefono frame = new telefono();
-        frame.setVisible(true);
-        //this.setVisible(false);
-    }//GEN-LAST:event_TelefonosActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        eliminarRepresentante frame = new eliminarRepresentante();
-        frame.setVisible(true);
-        //this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void modificarRepresentanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarRepresentanteActionPerformed
-        modificarRepresentante frame = new modificarRepresentante();
-        frame.setVisible(true);
-        //this.setVisible(false);
-    }//GEN-LAST:event_modificarRepresentanteActionPerformed
-
-    private void BuscarRepresentanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarRepresentanteActionPerformed
-        buscarRepresentante frame = new buscarRepresentante();
-        frame.setVisible(true);
-        //this.setVisible(false);
-    }//GEN-LAST:event_BuscarRepresentanteActionPerformed
-
-    private void RegistrarRepresentanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarRepresentanteActionPerformed
-
-        String dniRepreStr = JOptionPane.showInputDialog(this, "Ingrese DNI del Representante:");
-        int dniRepre = Integer.parseInt(dniRepreStr);  // Convertir a int
-        String nomRepre = JOptionPane.showInputDialog(this, "Ingrese Nombre del Representante:");
-        String apePRe = JOptionPane.showInputDialog(this, "Ingrese Apellido Paterno del Representante:");
-        String apeMRe = JOptionPane.showInputDialog(this, "Ingrese Apellido Materno del Representante:");
-        String sexo = JOptionPane.showInputDialog(this, "Ingrese el sexo del Representante");
-        String idDistritoRStr = JOptionPane.showInputDialog(this, "Ingrese ID del Distrito del Representante:");
-        int idDistritoR = Integer.parseInt(idDistritoRStr);  // Convertir a int
-        String domicilio = JOptionPane.showInputDialog(this, "Ingrese Domicilio del Representante:");
-        String ocupacion = JOptionPane.showInputDialog(this, "Ingrese Ocupación del Representante:");
-        String lugarTrabajo = JOptionPane.showInputDialog(this, "Ingrese Lugar de Trabajo del Representante:");
-        String correo = JOptionPane.showInputDialog(this, "Ingrese Correo Electrónico del Representante:");
-        String idTelefonoStr = JOptionPane.showInputDialog(this, "Ingrese ID de Teléfono del Representante:");
-        int idTelefono = Integer.parseInt(idTelefonoStr);  // Convertir a int
-
-        // Crea el objeto Representante
-        Representante representante = new Representante(dniRepre, nomRepre, apePRe, apeMRe, sexo, idDistritoR, domicilio, ocupacion, lugarTrabajo, correo, idTelefono);
-
-        // Instancia de la clase DAO para Representantes
-        RepresentanteDAO representantesDAO = new RepresentanteDAO();
-
-        // Intenta insertar el representante en la base de datos
-        boolean registroExitoso = representantesDAO.insertar(representante);
-
-        // Muestra un mensaje de éxito o error
-        if (registroExitoso) {
-            JOptionPane.showMessageDialog(this, "Registro de Representante exitoso");
-        } else {
-            JOptionPane.showMessageDialog(this, "Error en el registro del Representante");
-        }
-    }//GEN-LAST:event_RegistrarRepresentanteActionPerformed
+    private void none(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_none
+        
+    }//GEN-LAST:event_none
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //consultaralumnos();
@@ -1723,8 +846,8 @@ public class menuunitario extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseMoved
 
     private void HabilidadesAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HabilidadesAlumnoActionPerformed
-        habilidad frame = new habilidad();
-        frame.setVisible(true);
+        //habilidad frame = new habilidad();
+        //frame.setVisible(true);
         //this.setVisible(false);
     }//GEN-LAST:event_HabilidadesAlumnoActionPerformed
 
@@ -1837,174 +960,6 @@ public class menuunitario extends javax.swing.JFrame {
         RegistrarAlumnos.setBackground(new Color(0, 128, 128));
     }//GEN-LAST:event_RegistrarAlumnosMouseMoved
 
-    private void RegistrarRepresentanteMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarRepresentanteMouseMoved
-        RegistrarRepresentante.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_RegistrarRepresentanteMouseMoved
-
-    private void BuscarRepresentanteMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarRepresentanteMouseMoved
-        BuscarRepresentante.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_BuscarRepresentanteMouseMoved
-
-    private void modificarRepresentanteMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarRepresentanteMouseMoved
-        modificarRepresentante.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_modificarRepresentanteMouseMoved
-
-    private void jButton2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseMoved
-        jButton2.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_jButton2MouseMoved
-
-    private void TelefonosMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TelefonosMouseMoved
-        Telefonos.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_TelefonosMouseMoved
-
-    private void jButton6MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseMoved
-        jButton6.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_jButton6MouseMoved
-
-    private void RegistrarMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarMouseMoved
-        Registrar.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_RegistrarMouseMoved
-
-    private void Buscar1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Buscar1MouseMoved
-        Buscar1.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_Buscar1MouseMoved
-
-    private void modificarMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMouseMoved
-        modificar.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_modificarMouseMoved
-
-    private void jButton3MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseMoved
-        jButton3.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_jButton3MouseMoved
-
-    private void jButton7MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseMoved
-        jButton7.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_jButton7MouseMoved
-
-    private void RegistrarDistritoAlumnoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarDistritoAlumnoMouseMoved
-        RegistrarDistritoAlumno.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_RegistrarDistritoAlumnoMouseMoved
-
-    private void Buscar2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Buscar2MouseMoved
-        Buscar2.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_Buscar2MouseMoved
-
-    private void modificar1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificar1MouseMoved
-        modificar1.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_modificar1MouseMoved
-
-    private void jButton4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseMoved
-        jButton4.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_jButton4MouseMoved
-
-    private void jButton8MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseMoved
-        jButton8.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_jButton8MouseMoved
-
-    private void Registrar2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Registrar2MouseMoved
-        Registrar2.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_Registrar2MouseMoved
-
-    private void Buscar3MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Buscar3MouseMoved
-        Buscar3.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_Buscar3MouseMoved
-
-    private void modificar2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificar2MouseMoved
-        modificar2.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_modificar2MouseMoved
-
-    private void jButton5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseMoved
-        jButton5.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_jButton5MouseMoved
-
-    private void jButton9MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseMoved
-        jButton9.setBackground(new Color(0, 128, 128));
-    }//GEN-LAST:event_jButton9MouseMoved
-
-    private void RegistrarRepresentanteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarRepresentanteMouseExited
-        RegistrarRepresentante.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_RegistrarRepresentanteMouseExited
-
-    private void BuscarRepresentanteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarRepresentanteMouseExited
-        BuscarRepresentante.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_BuscarRepresentanteMouseExited
-
-    private void modificarRepresentanteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarRepresentanteMouseExited
-        modificarRepresentante.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_modificarRepresentanteMouseExited
-
-    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
-        jButton2.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_jButton2MouseExited
-
-    private void TelefonosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TelefonosMouseExited
-        Telefonos.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_TelefonosMouseExited
-
-    private void jButton6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseExited
-        jButton6.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_jButton6MouseExited
-
-    private void RegistrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarMouseExited
-        Registrar.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_RegistrarMouseExited
-
-    private void Buscar1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Buscar1MouseExited
-        Buscar1.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_Buscar1MouseExited
-
-    private void modificarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMouseExited
-        modificar.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_modificarMouseExited
-
-    private void jButton3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseExited
-        jButton3.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_jButton3MouseExited
-
-    private void jButton7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseExited
-        jButton7.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_jButton7MouseExited
-
-    private void RegistrarDistritoAlumnoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarDistritoAlumnoMouseExited
-        RegistrarDistritoAlumno.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_RegistrarDistritoAlumnoMouseExited
-
-    private void Buscar2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Buscar2MouseExited
-        Buscar2.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_Buscar2MouseExited
-
-    private void modificar1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificar1MouseExited
-        modificar1.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_modificar1MouseExited
-
-    private void jButton4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseExited
-        jButton4.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_jButton4MouseExited
-
-    private void jButton8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseExited
-        jButton8.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_jButton8MouseExited
-
-    private void Registrar2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Registrar2MouseExited
-        Registrar2.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_Registrar2MouseExited
-
-    private void Buscar3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Buscar3MouseExited
-        Buscar3.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_Buscar3MouseExited
-
-    private void modificar2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificar2MouseExited
-        modificar2.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_modificar2MouseExited
-
-    private void jButton5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseExited
-        jButton5.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_jButton5MouseExited
-
-    private void jButton9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseExited
-        jButton9.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_jButton9MouseExited
-
     private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
         Xmouse = evt.getX();
         Ymouse = evt.getY();
@@ -2040,11 +995,9 @@ public class menuunitario extends javax.swing.JFrame {
         conexiones conec = new conexiones();
         try {
             conec.cambiarLocal();
-            consultarDistritosalum();
-            consultarDistritosrepres();
+           
             consultaralumnos();
-            consultarRepresentantes();
-            consultarMatriculas();
+            
 
         } catch (Exception ex) {
 
@@ -2057,15 +1010,86 @@ public class menuunitario extends javax.swing.JFrame {
         conexiones conec = new conexiones();
         conec.cambiarServidor();
         try {
-            consultarDistritosalum();
-            consultarDistritosrepres();
+           
             consultaralumnos();
-            consultarRepresentantes();
-            consultarMatriculas();
+            
         } catch (Exception ex) {
 
         }
     }//GEN-LAST:event_jPanel30MouseClicked
+
+    private void RegistrarAlumnos1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarAlumnos1MouseMoved
+
+        RegistrarAlumnos.setBackground(new Color(0, 128, 128));
+    }//GEN-LAST:event_RegistrarAlumnos1MouseMoved
+
+    private void RegistrarAlumnos1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarAlumnos1MouseExited
+        RegistrarAlumnos.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_RegistrarAlumnos1MouseExited
+
+    private void RegistrarAlumnos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarAlumnos1ActionPerformed
+        lectorQR registrar = new lectorQR();
+        registrar.setVisible(true);
+    }//GEN-LAST:event_RegistrarAlumnos1ActionPerformed
+
+    private void modificarAlumno1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarAlumno1MouseMoved
+        modificarAlumno.setBackground(new Color(0, 128, 128));
+    }//GEN-LAST:event_modificarAlumno1MouseMoved
+
+    private void modificarAlumno1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarAlumno1MouseExited
+        modificarAlumno.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_modificarAlumno1MouseExited
+
+    private void modificarAlumno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarAlumno1ActionPerformed
+        modificarAsistencia frame = new modificarAsistencia();
+        frame.setVisible(true);
+        //this.setVisible(false);
+    }//GEN-LAST:event_modificarAlumno1ActionPerformed
+
+    private void EliminarAlumno1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarAlumno1MouseMoved
+        EliminarAlumno.setBackground(new Color(0, 128, 128));
+    }//GEN-LAST:event_EliminarAlumno1MouseMoved
+
+    private void EliminarAlumno1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarAlumno1MouseExited
+        EliminarAlumno.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_EliminarAlumno1MouseExited
+
+    private void EliminarAlumno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarAlumno1ActionPerformed
+        eliminarAlumno frame = new eliminarAlumno();
+        frame.setVisible(true);
+        //this.setVisible(false);
+    }//GEN-LAST:event_EliminarAlumno1ActionPerformed
+
+    private void regreasrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regreasrActionPerformed
+        login frame = new login();
+        frame.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_regreasrActionPerformed
+
+    private void dnientradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dnientradaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dnientradaActionPerformed
+
+    private void jButton2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseMoved
+        jButton1.setBackground(new Color(0, 128, 128));
+    }//GEN-LAST:event_jButton2MouseMoved
+
+    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
+        jButton1.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_jButton2MouseExited
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        //consultaralumnos();
+        //JOptionPane.showMessageDialog(null, "Actualizado!");
+
+        //
+        try {
+            consultarasistencia();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        JOptionPane.showMessageDialog(null, "Actualizado!");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2129,23 +1153,48 @@ public class menuunitario extends javax.swing.JFrame {
 
         Tabla.setModel(modeloAlumnos);
     }
+    void consultarasistencia() {
+        AsistenciaDAO asistenciaDAO = new AsistenciaDAO();
 
-    void consultarRepresentantes() {
-        // Crear una instancia para obtener los representantes
-        // Asumo que tienes una clase similar para representantes como la que tenías para alumnos
-        RepresentanteDAO representanteDAO = new RepresentanteDAO();
-
-        // Obtener la lista de todos los representantes
-        List<Representante> listaRepresentantes = representanteDAO.obtenerTodosLosRepresentantes();
+        // Obtener la lista de todas las habilidades
+        List<Asistencia> listaAsistencia = asistenciaDAO.obtenerAsistenciaPorDNI(Integer.parseInt(dnientrada.getText()));
 
         // Limpia las filas existentes en la tabla
-        DefaultTableModel modeloRepresentantes = (DefaultTableModel) Tabla2.getModel();
-        while (modeloRepresentantes.getRowCount() > 0) {
+        DefaultTableModel modelo = (DefaultTableModel) asistenciatabla.getModel();
+        while (modelo.getRowCount() > 0) {
+            modelo.removeRow(0);
+        }
+
+        // Iterar sobre la lista de habilidades y agregarlas a la tabla
+        for (Asistencia asistencia : listaAsistencia) {
+        String llegada = asistencia.getLlegada_temprano() ? "temprano" : "tarde";
+        Object[] filaHabilidad = new Object[]{
+            asistencia.getId_asistencia(),
+            asistencia.getDni(),
+            asistencia.getFecha_hora(),
+            llegada
+        };
+        modelo.addRow(filaHabilidad);
+    }
+
+        asistenciatabla.setModel(modelo);
+    }
+    /*void consultarRepresentantes() {
+        // Crear una instancia para obtener los representantes
+        // Asumo que tienes una clase similar para representantes como la que tenías para alumnos
+        //RepresentanteDAO representanteDAO = new RepresentanteDAO();
+
+        // Obtener la lista de todos los representantes
+        //List<Representante> listaRepresentantes = representanteDAO.obtenerTodosLosRepresentantes();
+
+        // Limpia las filas existentes en la tabla
+        //DefaultTableModel modeloRepresentantes = (DefaultTableModel) Tabla2.getModel();
+       /* while (modeloRepresentantes.getRowCount() > 0) {
             modeloRepresentantes.removeRow(0);
         }
 
         // Iterar sobre la lista de representantes y agregarlos a la tabla
-        for (Representante representante : listaRepresentantes) {
+        /*for (Representante representante : listaRepresentantes) {
             Object[] datosRepresentante = new Object[]{
                 representante.getId_Repre(),
                 representante.getNom_Repre(),
@@ -2158,9 +1207,9 @@ public class menuunitario extends javax.swing.JFrame {
         }
 
         Tabla2.setModel(modeloRepresentantes);
-    }
+    }*/
 
-    void consultarMatriculas() {
+    /*void consultarMatriculas() {
 
         MatriculaDAO matriculaDAO = new MatriculaDAO();
         List<Matricula> listaMatriculas = matriculaDAO.obtenerTodasLasMatriculas();
@@ -2185,8 +1234,8 @@ public class menuunitario extends javax.swing.JFrame {
 
         matriculitas.setModel(modeloMatriculas);
     }
-
-    void consultarDistritosalum() {
+*/
+  /*  void consultarDistritosalum() {
         DistritoAlumDAO distritoDAO = new DistritoAlumDAO();
 
         // Obtener la lista de todos los distritos
@@ -2209,8 +1258,8 @@ public class menuunitario extends javax.swing.JFrame {
 
         TablaDistritoAlum.setModel(modelotablaalumdistrict);
     }
-
-    void consultarDistritosrepres() {
+*/
+  /*  void consultarDistritosrepres() {
         DistritoRepreDAO distritoDAO = new DistritoRepreDAO();
 
         // Obtener la lista de todos los distritos
@@ -2232,49 +1281,31 @@ public class menuunitario extends javax.swing.JFrame {
         }
 
         tabladistritorepre.setModel(modelodistrictrepre);
-    }
+    }*/
+  
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Buscar1;
-    private javax.swing.JButton Buscar2;
-    private javax.swing.JButton Buscar3;
     private javax.swing.JButton BuscarAlumno;
-    private javax.swing.JButton BuscarRepresentante;
     private javax.swing.JPanel Distritosboton;
     private javax.swing.JPanel Distritosboton2;
     private javax.swing.JButton EliminarAlumno;
+    private javax.swing.JButton EliminarAlumno1;
     private javax.swing.JButton HabilidadesAlumno;
-    private javax.swing.JButton Registrar;
-    private javax.swing.JButton Registrar2;
     private javax.swing.JButton RegistrarAlumnos;
-    private javax.swing.JButton RegistrarDistritoAlumno;
-    private javax.swing.JButton RegistrarRepresentante;
+    private javax.swing.JButton RegistrarAlumnos1;
     private javax.swing.JTable Tabla;
-    private javax.swing.JTable Tabla2;
-    private javax.swing.JTable TablaDistritoAlum;
-    private javax.swing.JButton Telefonos;
+    private javax.swing.JTable asistenciatabla;
     private javax.swing.JLabel databasetag;
+    private javax.swing.JTextField dnientrada;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel32;
@@ -2282,24 +1313,12 @@ public class menuunitario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
@@ -2311,22 +1330,15 @@ public class menuunitario extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable matriculitas;
-    private javax.swing.JButton modificar;
-    private javax.swing.JButton modificar1;
-    private javax.swing.JButton modificar2;
     private javax.swing.JButton modificarAlumno;
-    private javax.swing.JButton modificarRepresentante;
+    private javax.swing.JButton modificarAlumno1;
     private javax.swing.JTabbedPane multimenus;
     private javax.swing.JPanel panelbotonAlumnos;
     private javax.swing.JPanel panelbotonMatriculas;
     private javax.swing.JPanel panelbotonRepresentantes;
+    private javax.swing.JButton regreasr;
     private javax.swing.JPanel salida;
-    private javax.swing.JTable tabladistritorepre;
     private javax.swing.JLabel usertesxt;
     // End of variables declaration//GEN-END:variables
 }

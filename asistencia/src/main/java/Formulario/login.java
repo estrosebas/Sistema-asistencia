@@ -295,20 +295,11 @@ public class login extends javax.swing.JFrame {
                 int archivoid = sesion.getId_admini();
                 escribirNumSesion(archivoid);
 
-                Object[] options = {"Asistencia", "Matrículas"};
-                int choice = JOptionPane.showOptionDialog(null, "Seleccione una opción", "Elegir", JOptionPane.DEFAULT_OPTION,
-                        JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
+               
+                menuunitario frame = new menuunitario();
+                frame.setVisible(true);
+                this.setVisible(false);
 
-                if (choice == 0) {
-                    AsistenciaMenu frame = new AsistenciaMenu();
-                    frame.setVisible(true);
-                    this.setVisible(false);
-                } else if (choice == 1) {
-                    menuunitario frame = new menuunitario();
-                    frame.setVisible(true);
-                    this.setVisible(false);
-                    
-                }
             } else {
                 // Contraseña incorrecta
                 javax.swing.JOptionPane.showMessageDialog(this, "Contraseña incorrecta", "LOGIN", javax.swing.JOptionPane.ERROR_MESSAGE, iconoPersonalizadoAlerta);
